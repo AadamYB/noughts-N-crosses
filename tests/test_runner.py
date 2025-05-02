@@ -1,13 +1,17 @@
-""" test scripts """
+"""test scripts"""
+
 import pytest
 
+
 def test_exxample():
-    """ just assert true """
+    """just assert true"""
     assert True
 
+
 def test_success():
-    """ this should pass """
+    """this should pass"""
     assert 1 == 1
+
 
 # def test_failure():
 #     """ this should fail """
