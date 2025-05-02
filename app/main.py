@@ -1,4 +1,4 @@
-from tkinter import *
+import tkinter as tk
 import random
 
 class SimpleTicTacToe:
@@ -9,20 +9,20 @@ class SimpleTicTacToe:
         self.current_player = random.choice(["X", "O"])
         self.buttons = [[None for _ in range(3)] for _ in range(3)]
 
-        self.label = Label(root, text=f"{self.current_player}'s Turn", font=("Arial", 24))
+        self.label = tk.Label(root, text=f"{self.current_player}'s Turn", font=("Arial", 24))
         self.label.pack(pady=10)
 
-        self.frame = Frame(root)
+        self.frame = tk.Frame(root)
         self.frame.pack()
 
         for r in range(3):
             for c in range(3):
-                btn = Button(self.frame, text="", font=("Arial", 36), width=5, height=2,
+                btn = tk.Button(self.frame, text="", font=("Arial", 36), width=5, height=2,
                              command=lambda r=r, c=c: self.next_turn(r, c))
                 btn.grid(row=r, column=c, padx=5, pady=5)
                 self.buttons[r][c] = btn
 
-        self.reset_btn = Button(root, text="Restart Game", font=("Arial", 16), command=self.reset_board)
+        self.reset_btn = tk.Button(root, text="Restart Game", font=("Arial", 16), command=self.reset_board)
         self.reset_btn.pack(pady=10)
 
     def next_turn(self, r, c):
@@ -59,16 +59,16 @@ class SimpleTicTacToe:
     def disable_all(self):
         for row in self.buttons:
             for btn in row:
-                btn.config(state=DISABLED)
+                btn.config(state=tk.DISABLED)
 
     def reset_board(self):
         for r in range(3):
             for c in range(3):
-                self.buttons[r][c].config(text="", state=NORMAL)
+                self.buttons[r][c].config(text="", state=tk.NORMAL)
         self.current_player = random.choice(["X", "O"])
         self.label.config(text=f"{self.current_player}'s Turn")
 
 if __name__ == "__main__":
-    root = Tk()
+    root = tk.Tk()
     app = SimpleTicTacToe(root)
     root.mainloop()
