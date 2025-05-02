@@ -69,6 +69,6 @@ class SimpleTicTacToe:
         self.label.config(text=f"{self.current_player}'s Turn")
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = SimpleTicTacToe(root)
-    root.mainloop()
+    root_tk = tk.Tk()
+    app = SimpleTicTacToe(root_tk)
+    root_tk.mainloop()
