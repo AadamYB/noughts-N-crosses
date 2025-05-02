@@ -14,5 +14,8 @@ def test_success():
 
 
 def test_failure():
-    """ this should fail """
+    """this should fail"""
     assert 1 + 1 == 3
+
+
+# try this beforehand
