@@ -2,7 +2,7 @@ import tkinter as tk
 import random
 
 
-class SimpleTicTacToe:
+class noughtsNcrosses:
     def __init__(self, root):
         self.root = root
         self.root.title("Tic Tac Toe")
@@ -82,5 +82,5 @@ class SimpleTicTacToe:
 
 if __name__ == "__main__":
     root_tk = tk.Tk()
-    app = SimpleTicTacToe(root_tk)
+    app = noughtsNcrosses(root_tk)
     root_tk.mainloop()
