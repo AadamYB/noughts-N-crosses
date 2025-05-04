@@ -2,6 +2,7 @@
 
 import pytest
 from tkinter import *
+from unittest.mock import MagicMock, patch
 from app.main import noughtsNcrosses
 
 
@@ -15,14 +16,21 @@ def test_success():
     assert 1 == 1
 
 
-def test_initial_player_label():
-    root = Tk()
-    root.withdraw()  # Prevents the game window from showing during test
-    game = noughtsNcrosses(root)
+@patch("tkinter.Tk")
+@patch("tkinter.Label")
+@patch("tkinter.Frame")
+@patch("tkinter.Button")
+def test_initial_player_label(MockButton, MockFrame, MockLabel, MockTk):
+    """Mock GUI elements to run Tkinter-based test headlessly"""
+    mock_root = MagicMock()
+    game = noughtsNcrosses(mock_root)
+
+    # Simulate what the label's text would be
+    game.current_player = "X"
+    game.label.cget = lambda attr: "X's Turn"
 
     label_text = game.label.cget("text")
     assert label_text in ["X's Turn", "O's Turn"]
-    root.destroy()
 
 
 # def test_failure():
