@@ -7,7 +7,7 @@ run_commands:
 pause_before_clone: false
 pause_after_clone: false
 pause_before_build: false
-pause_after_build: True
+pause_after_build: true
 pause_before_test: false
 pause_after_test: false
 
