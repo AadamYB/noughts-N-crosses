@@ -14,6 +14,7 @@ def test_success():
     """this should pass"""
     assert 1 == 1
 
+
 def test_initial_player_label():
     root = Tk()
     root.withdraw()  # Prevents the game window from showing during test
@@ -22,6 +23,7 @@ def test_initial_player_label():
     label_text = game.label.cget("text")
     assert label_text in ["X's Turn", "O's Turn"]
     root.destroy()
+
 
 # def test_failure():
 #     """this should fail"""
