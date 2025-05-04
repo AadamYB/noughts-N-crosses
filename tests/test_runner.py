@@ -25,7 +25,6 @@ def test_initial_player_label(MockButton, MockFrame, MockLabel, MockTk):
     mock_root = MagicMock()
     game = noughtsNcrosses(mock_root)
 
-    # Simulate what the label's text would be
     game.current_player = "X"
     game.label.cget = lambda attr: "X's Turn"
 
