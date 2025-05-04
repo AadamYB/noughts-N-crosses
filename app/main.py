@@ -1,3 +1,4 @@
+# from tkinter import *   # Causes pylint errors
 import tkinter as tk
 import random
 

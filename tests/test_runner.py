@@ -1,7 +1,7 @@
 """test scripts"""
 
 import pytest
-from ..app import main
+from app import main
 
 
 def test_exxample():
