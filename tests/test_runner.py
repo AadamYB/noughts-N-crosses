@@ -16,6 +16,11 @@ def test_success():
     assert 1 == 1
 
 
+def test_failure():
+    """this should fail"""
+    assert 1 + 2 == 3
+
+
 @patch("tkinter.Tk")
 @patch("tkinter.Label")
 @patch("tkinter.Frame")
