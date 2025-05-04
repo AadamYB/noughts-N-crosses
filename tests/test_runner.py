@@ -36,4 +36,5 @@ def test_initial_player_label(MockButton, MockFrame, MockLabel, MockTk):
     label_text = game.label.cget("text")
     assert label_text in ["X's Turn", "O's Turn"]
 
+
 # Comment
