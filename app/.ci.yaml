@@ -1,0 +1,13 @@
+lint: true
+format: true
+build: true
+test: true
+run_commands:
+  - echo "🎉 Congratulations! Build and Tests completed!"`,
+pause_before_clone: false
+pause_after_clone: false
+pause_before_build: false
+pause_after_build: True
+pause_before_test: false
+pause_after_test: false
+

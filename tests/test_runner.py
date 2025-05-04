@@ -2,7 +2,7 @@
 
 import pytest
 from tkinter import *
-from app import noughtsNcrosses
+from app.main import noughtsNcrosses
 
 
 def test_example():
