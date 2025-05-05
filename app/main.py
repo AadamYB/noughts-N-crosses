@@ -1,5 +1,5 @@
-# from tkinter import *   # Causes pylint errors
-import tkinter as tk
+from tkinter import *   # Causes pylint errors
+# import tkinter as tk
 import random
 
 
@@ -16,12 +16,14 @@ class noughtsNcrosses:
         )
         self.label.pack(pady=10)
 
-        self.frame = tk.Frame(root)
+        self.frame = Frame(root)   # Causes pylint errors
+        # self.frame = tk.Frame(root)
         self.frame.pack()
 
         for r in range(3):
             for c in range(3):
-                btn = tk.Button(
+                btn = Button(   # Causes pylint errors
+                # btn = tk.Button(
                     self.frame,
                     text="",
                     font=("Arial", 36),
@@ -32,7 +34,8 @@ class noughtsNcrosses:
                 btn.grid(row=r, column=c, padx=5, pady=5)
                 self.buttons[r][c] = btn
 
-        self.reset_btn = tk.Button(
+        # self.reset_btn = tk.Button(   
+        self.reset_btn = Button(   # Causes pylint errors
             root, text="Restart Game", font=("Arial", 16), command=self.reset_board
         )
         self.reset_btn.pack(pady=10)
@@ -71,17 +74,20 @@ class noughtsNcrosses:
     def disable_all(self):
         for row in self.buttons:
             for btn in row:
-                btn.config(state=tk.DISABLED)
+                # btn.config(state=tk.DISABLED)
+                btn.config(state=DISABLED)   # Causes pylint errors
 
     def reset_board(self):
         for r in range(3):
             for c in range(3):
-                self.buttons[r][c].config(text="", state=tk.NORMAL)
+                # self.buttons[r][c].config(text="", state=tk.NORMAL)
+                self.buttons[r][c].config(text="", state=NORMAL)   # Causes pylint errors
         self.current_player = random.choice(["X", "O"])
         self.label.config(text=f"{self.current_player}'s Turn")
 
 
 if __name__ == "__main__":
-    root_tk = tk.Tk()
+    # root_tk = tk.Tk()
+    root_tk = Tk()   # Causes pylint errors
     app = noughtsNcrosses(root_tk)
     root_tk.mainloop()
