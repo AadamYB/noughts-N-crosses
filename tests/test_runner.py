@@ -16,7 +16,7 @@ def test_success():
     assert 1 == 1
 
 
-# def test_failure():
+# def test_failure(): fail
 #     """this should fail"""
 #     assert 10 + 2 == 3
 
