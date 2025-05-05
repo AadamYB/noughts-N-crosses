@@ -1,7 +1,6 @@
 """test scripts"""
 
 import pytest
-from tkinter import *
 from unittest.mock import MagicMock, patch
 from app.main import noughtsNcrosses
 
