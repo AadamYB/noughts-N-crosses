@@ -11,7 +11,8 @@ class noughtsNcrosses:
         self.current_player = random.choice(["X", "O"])
         self.buttons = [[None for _ in range(3)] for _ in range(3)]
 
-        self.label = tk.Label(
+        self.label = Label(   # Causes pylint errors
+        # self.label = tk.Label(
             root, text=f"{self.current_player}'s Turn", font=("Arial", 24)
         )
         self.label.pack(pady=10)
@@ -34,8 +35,8 @@ class noughtsNcrosses:
                 btn.grid(row=r, column=c, padx=5, pady=5)
                 self.buttons[r][c] = btn
 
-        # self.reset_btn = tk.Button(   
         self.reset_btn = Button(   # Causes pylint errors
+        # self.reset_btn = tk.Button(   
             root, text="Restart Game", font=("Arial", 16), command=self.reset_board
         )
         self.reset_btn.pack(pady=10)
@@ -74,20 +75,20 @@ class noughtsNcrosses:
     def disable_all(self):
         for row in self.buttons:
             for btn in row:
-                # btn.config(state=tk.DISABLED)
                 btn.config(state=DISABLED)   # Causes pylint errors
+                # btn.config(state=tk.DISABLED)
 
     def reset_board(self):
         for r in range(3):
             for c in range(3):
-                # self.buttons[r][c].config(text="", state=tk.NORMAL)
                 self.buttons[r][c].config(text="", state=NORMAL)   # Causes pylint errors
+                # self.buttons[r][c].config(text="", state=tk.NORMAL)
         self.current_player = random.choice(["X", "O"])
         self.label.config(text=f"{self.current_player}'s Turn")
 
 
 if __name__ == "__main__":
-    # root_tk = tk.Tk()
     root_tk = Tk()   # Causes pylint errors
+    # root_tk = tk.Tk()
     app = noughtsNcrosses(root_tk)
     root_tk.mainloop()
