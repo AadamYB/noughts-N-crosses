@@ -36,7 +36,7 @@ class noughtsNcrosses:
                 self.buttons[r][c] = btn
 
         # self.reset_btn = Button(   # Causes pylint errors
-        self.reset_btn = tk.Button(   
+        self.reset_btn = tk.Button(
             root, text="Restart Game", font=("Arial", 16), command=self.reset_board
         )
         self.reset_btn.pack(pady=10)
