@@ -4,7 +4,6 @@ format: true
 build: true
 test: true
 
-# Optional breakpoint controls
 pause_before_clone: false
 pause_after_clone: false
 pause_before_build: false
