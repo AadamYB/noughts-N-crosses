@@ -5,7 +5,7 @@ build: true
 test: true
 
 # Optional debugging pause breakpoints
-pause_before_clone: true
+pause_before_clone: false
 pause_after_clone: false
 pause_before_build: false
 pause_after_build: true
