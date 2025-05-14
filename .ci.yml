@@ -12,5 +12,6 @@ pause_after_build: false
 pause_before_test: false
 pause_after_test: false
 
+# trigger
 run_commands:
   - echo "🎉 Default build and test completed!"
