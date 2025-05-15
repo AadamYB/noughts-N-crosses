@@ -2,7 +2,7 @@ import tkinter as tk
 import random
 
 
-class SimpleTicTacToe:
+class SimpleTicTacToe:  # No clue
     def __init__(self, root):
         self.root = root
         self.root.title("Tic Tac Toe")
