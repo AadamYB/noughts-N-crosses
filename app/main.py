@@ -1,5 +1,5 @@
 from tkinter import *   # Causes pylint errors
-# import tkinter as tk
+# import tkinter as tk  #fail
 import random
 
 
