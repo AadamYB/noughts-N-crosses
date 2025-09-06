@@ -1,0 +1,16 @@
+# 🐍 Python Project Example
+lint: true
+format: true
+build: true
+test: true
+
+# Optional debugging pause breakpoints
+pause_before_clone: false
+pause_after_clone: false
+pause_before_build: false
+pause_after_build: true
+pause_before_test: false
+pause_after_test: false
+
+run_commands:
+  - echo "GREAT!! Python pipeline completed!"
