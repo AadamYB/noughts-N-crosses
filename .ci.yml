@@ -1,0 +1,17 @@
+# 🛠️ Default CI Pipeline Configuration
+lint: true
+format: false
+build: true
+test: true
+
+# Optional breakpoint controls
+pause_before_clone: false
+pause_after_clone: false
+pause_before_build: false
+pause_after_build: false
+pause_before_test: false
+pause_after_test: false
+
+# trigger
+run_commands:
+  - echo "🎉 Default build and test completed!"
